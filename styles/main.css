@@ -70,4 +70,10 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    color: black;
+}
+
+.footer_icons i {
+    color: grey;
+    margin-left: 0.2em;
 }
