@@ -1,10 +1,14 @@
+:root {
+    --background: #F2F2F2;
+}
+
 .cv_elem_flex {
     display: flex;
     flex-direction: row;
     padding-bottom: 35px;
 }
 .date_loc {
-    min-width: 200px;
+    min-width: 130px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;

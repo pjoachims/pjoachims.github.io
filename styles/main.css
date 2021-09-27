@@ -7,7 +7,7 @@ body {
     background-color: #F2F2F2;
 }
 .body_container {
-    min-width: 600px;
+    min-width: 300px;
     max-width: 1200px;
     margin: auto;
 }
@@ -51,4 +51,3 @@ body {
     align-items: center;
     font-size:30px;
 }
-
