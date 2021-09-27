@@ -5,12 +5,12 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F2F2F2;
-    font-size: 16px;
 }
 .body_container {
     min-width: 300px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
+    font-size: 16px;
 }
 
 .header {
@@ -22,11 +22,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
 }
 .header_icon_name {
-    /* width: 30%;
-    min-width: 150px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 .header_other {
   
@@ -64,19 +66,8 @@ body {
 }
 .footer_icons {
     font-size: 35px;
-}
-
-.icon_container {
-    /* display: flex; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    align-items: center; 
-    font-size: 45px;
-    /* height: 200px; */
-}
-
-.footer_cr{
-    font-size: 16px;
+    align-items: center;
 }

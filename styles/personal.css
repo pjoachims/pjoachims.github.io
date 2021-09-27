@@ -1,9 +1,12 @@
 :root {
     --background: #F2F2F2;
 }
-
 p {
-    font-size: 24px;
+    /* font-size: 18px; */
+}
+
+h1 {
+    font-size: 20px;
 }
 
 a {
