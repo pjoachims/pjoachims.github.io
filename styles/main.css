@@ -31,7 +31,7 @@ body {
     align-items: center;
 }
 .header_other {
-  
+
 }
 .header a {
     /* padding-left: 5px; */
@@ -59,10 +59,10 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
 }
 .footer_copyright {
-    font-size: 20px;
+    font-size: 14px;
 }
 .footer_icons {
     font-size: 35px;
