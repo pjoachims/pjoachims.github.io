@@ -1,0 +1,54 @@
+:root {
+    --background: #F2F2F2;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+}
+.body_container {
+    min-width: 600px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    text-align: left;
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.header a {
+    /* padding-left: 5px; */
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 2em;
+    color: grey;
+}
+.header b {
+    font-size: 28px;
+    color: black;
+}
+.thumbnail:hover {
+    position:relative;
+    /* top:-25px;
+    left:-35px; */
+    width:350px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+.footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+}
+
+.icon-container {
+    align-items: center;
+    font-size:30px;
+}
+
