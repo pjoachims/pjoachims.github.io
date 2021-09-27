@@ -9,7 +9,7 @@
 }
 .date_loc {
     width: 20%;
-    min-width: 130px; 
+    min-width: 130px;
     max-width: 200px;
     padding-left: 10px;
     padding-right: 10px;
@@ -33,6 +33,7 @@ ul {
 }
 .edu_details a{
     color: blue;
+    text-decoration: none;
 }
 .pos{
     text-transform: uppercase;
@@ -55,7 +56,7 @@ ul {
     font-size: 24px;
 }
 .hr1 {
-    margin-top: -1em; 
+    margin-top: -1em;
     border: 0;
     border-top: 1px solid black;
 }
@@ -71,7 +72,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .skillim_cell {

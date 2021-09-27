@@ -1,0 +1,17 @@
+:root {
+    --background: #F2F2F2;
+}
+
+p {
+    font-size: 24px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+.hr1 {
+    margin-top: -1em;
+    border: 0;
+    border-top: 1px solid black;
+}
