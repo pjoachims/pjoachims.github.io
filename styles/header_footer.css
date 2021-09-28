@@ -19,14 +19,15 @@
     flex-direction: row;
     align-items: center;
 }
-.header_other {
-    padding-left: 5px;
-    margin-right: 2em;
+.header_icon_name a {
+    margin-left: 1em;
+}
+.header_other a {
+    /* padding-left: 20px; */
+    margin-left: 2em;
 }
 .header a {
     text-decoration: none;
-    /* margin-left: 1em;
-    margin-right: 1em; */
     color: grey;
 }
 .header b {
