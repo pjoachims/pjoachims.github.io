@@ -5,33 +5,16 @@
   <title>Per Joachims - CV</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
+  <script src="../assets/javascripts/loader.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="../src/pics/me.ico">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/cv.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="load_footer(); load_header()"">
   <div class="body_container">
-    <div class="header">
-      <div class="header_icon_name">
-        <img src="../src/pics/me.jpg" style="border-radius: 25px;" class="thumbnail" height="50" width="50">
-        <a href=../index.html>
-          <b>
-            Per Joachims
-          </b>
-        </a>
-      </div>
-      <div class="header_other">
-        <a href="../html/projects.html" >Projects</a>
-        <a href="../html/cv.html" >CV</a>
-        <a href="../html/personal.html" >Personal</a>
-      </div>
-    </div>
-
+    <div id="header"> </div>
 
     <h1 class="sec_header"> (Selected) Work Experience </h1>
     <hr class="hr1"/>
@@ -105,8 +88,6 @@
       </div>
     </div>
 
-
-
     <h1 class="sec_header">Education</h1>
     <hr class="hr1"/>
     <div class='cv_elem_flex'>
@@ -169,9 +150,6 @@
       </div>
     </div>
 
-
-
-
     <h1 class="sec_header">Knowledge and Skills</h1>
     <hr class="hr1"/>
     <div class='skillim_row'>
@@ -186,17 +164,7 @@
       </div>
     </div>
 
-
-    <div class="footer">
-      <div class="footer_copyright">
-        Copyright © 2021 Per Joachims
-      </div>
-      <div class="footer_icons">
-        <a href="https://github.com/pjoachims/"><i class="fab fa-github fa-fw" aria-hidden="true" ></i></a>
-        <a href="https://www.linkedin.com/in/per-joachims-1476b8a2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a>
-        <a href="mailto:p.joachims@gmail.com"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i></a>
-      </div>
-    </div>
+    <div id="footer"> </div>
 
 </body>
 </html>

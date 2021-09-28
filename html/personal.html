@@ -5,32 +5,16 @@
   <title>Per Joachims - CV</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
+  <script src="../assets/javascripts/loader.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="../src/pics/me.ico">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/personal.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="load_footer(); load_header()"">
   <div class="body_container">
-    <div class="header">
-      <div class="header_icon_name">
-        <img src="../src/pics/me.jpg" style="border-radius: 25px;" class="thumbnail" height="50" width="50">
-        <a href=../index.html>
-          <b>
-            Per Joachims
-          </b>
-        </a>
-      </div>
-      <div class="header_other">
-        <a href="../html/projects.html" >Projects</a>
-        <a href="../html/cv.html" >CV</a>
-        <a href="../html/personal.html" >Personal</a>
-      </div>
-    </div>
+    <div id="header"> </div>
 
     <p>
       Hej, i am Per and I am currently finishing my studies in statistics (M.Sc.) and computer engineering (B.Sc.) in Berlin.
@@ -38,7 +22,7 @@
         <i class='edu_thesis_title'>Uncertainty Quantification with Bayesian Neural Networks</i>
         <a href=https://github.com/nnuncert/nnuncert>[GitHub]</a>
         <a href=../src/master_joachims_per.pdf>[PDF]</a>
-      I investigated the ability of a variety of approaches to model uncertainty in deep learning, combining the two existing fields deep learning and Bayesian statistics.
+      I investigated the ability of a variety of approaches to model uncertainty in deep learning, combining deep learning and Bayesian statistics.
     </p>
 
     <p>
@@ -64,16 +48,7 @@
     <h1>My favorite quotes</h1>
 
 
-    <div class="footer">
-      <div class="footer_copyright">
-        Copyright © 2021 Per Joachims
-      </div>
-      <div class="footer_icons">
-        <a href="https://github.com/pjoachims/"><i class="fab fa-github fa-fw" aria-hidden="true" ></i></a>
-        <a href="https://www.linkedin.com/in/per-joachims-1476b8a2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a>
-        <a href="mailto:p.joachims@gmail.com"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i></a>
-      </div>
-    </div>
+    <div id="footer"> </div>
 
 </body>
 </html>
