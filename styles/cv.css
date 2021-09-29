@@ -12,6 +12,7 @@ ul {
 }
 .date_loc {
     margin-left: 10px;
+    width: 20%;
 }
 @media (max-width: 600px) {
     .date_loc {
@@ -24,11 +25,6 @@ ul {
     .date_loc {
         min-width: 200px;
         max-width: 200px;
-    }
-}
-@media (min-width: 1000px){
-    .date_loc {
-        width: 20%;
     }
 }
 .elem_summary {
