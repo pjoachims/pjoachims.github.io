@@ -9,14 +9,12 @@
   <script src="../assets/javascripts/loader.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="../src/pics/me.ico">
   <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/blog.css">
   <link rel="stylesheet" href="../styles/cv.css">
 </head>
 
 <body onload="load_footer(); load_header()">
   <div class="body_container">
     <div id="header"> </div>
-
     <div id="work_experience">
       <h1 class="sec_header"> (Selected) Work Experience </h1>
       <hr class="hr1"/>
@@ -26,19 +24,21 @@
           <br>
           <span class='work_loc'> Berlin, Germany</span>
         </div>
-        <div class='work_details'>
+        <div class='work_right'>
           <p class='elem_summary'>
           <span class='pos'> Student research assistant </span>
           <span class='comp'> @ Humboldt-Universitaet zu Berlin - Chair of Operations Research </span>
           </p>
-          <ul>
-            <li>
-              TODO
-            </li>
-            <li>
-              TODO
-            </li>
-          </ul>
+          <div class='work_details'>
+            <ul>
+              <li>
+                TODO
+              </li>
+              <li>
+                TODO
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class='cv_elem_flex'>
@@ -47,22 +47,24 @@
           <br>
           <span class='work_loc'> Duesseldorf, Germany</span>
         </div>
-        <div class='work_details'>
+        <div class='work_right'>
           <p class='elem_summary'>
           <span class='pos'> Intern </span>
           <span class='comp'> @ PricewaterhouseCoopers AG - Valuation & Strategy </span>
           </p>
-          <ul>
-            <li>
-              Assistance in the valuation of a technology company
-            </li>
-            <li>
-              Assistance impairment test DAX30-company
-            </li>
-            <li>
-              Quantitative modelling
-            </li>
-          </ul>
+          <div class='work_details'>
+            <ul>
+              <li>
+                Assistance in the valuation of a technology company
+              </li>
+              <li>
+                Assistance impairment test DAX30-company
+              </li>
+              <li>
+                Quantitative modelling
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class='cv_elem_flex'>
@@ -71,24 +73,27 @@
           <br>
           <span class='work_loc'> Muenster, Germany</span>
         </div>
-        <div class='work_details'>
+        <div class='work_right'>
           <p class='elem_summary'>
           <span class='pos'> Student assistant </span>
           <span class='comp'> @ eCAPITAL entrepreneurial Partners AG - Investment Management </span>
           </p>
-          <ul>
-            <li>
-              Business valuations with the DCF and multiple method
-            </li>
-            <li>
-              Analyses of businessplans of potential investements
-            </li>
-            <li>
-              Analyses of market and competitive situations
-            </li>
-          </ul>
+          <div class='work_details'>
+            <ul>
+              <li>
+                Business valuations with the DCF and multiple method
+              </li>
+              <li>
+                Analyses of businessplans of potential investements
+              </li>
+              <li>
+                Analyses of market and competitive situations
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      
     </div>
 
     <div id="education">
@@ -100,19 +105,21 @@
           <br>
           <span class='edu_loc'>Berlin, Germany</span>
         </div>
-        <div class='edu_details'>
+        <div class='edu_right'>
           <p class='elem_summary'>
             <span class='degree_deg'>M.Sc.</span>
             <span class='degree_name'>Statistics</span>
             <span class='comp'> @ Humboldt-Universitaet zu Berlin</span>
           </p>
-          <span class='edu_det_cat'>Ø Grade: </span>
-          <span class='edu_det_grade'>1.6</span>
-          <br>
-          <span class='edu_det_cat'>Title of Thesis: </span>
-          <i class='edu_thesis_title'>Uncertainty Quantification with Bayesian Neural Networks</i>
+          <div class='edu_details'>
+            <span class='edu_det_cat'>Ø Grade: </span>
+            <span class='edu_det_grade'>1.6</span>
+            <br>
+            <span class='edu_det_cat'>Title of Thesis: </span>
+            <i class='edu_thesis_title'>Uncertainty Quantification with Bayesian Neural Networks</i>
           <a href=https://github.com/nnuncert/nnuncert>[GitHub]</a>
           <a href=../src/master_joachims_per.pdf>[PDF]</a>
+          </div>
         </div>
       </div>
       <div class='cv_elem_flex'>
@@ -121,41 +128,45 @@
           <br>
           <span class='edu_loc'>Berlin, Germany</span>
         </div>
-        <div class='edu_details'>
+        <div class='edu_right'>
           <p class='elem_summary'>
             <span class='degree_deg'>B.Sc.</span>
             <span class='degree_name'>Computer Engineering</span>
             <span class='comp'> @ Technische Universitaet zu Berlin</span>
           </p>
-          <span class='edu_det_cat'>Ø Grade: </span>
-          <span class='edu_det_grade'>1.9</span>
-          <br>
-          <span class='edu_det_cat'>Title of Thesis: </span>
-          <i class='edu_thesis_title'>TODO</i>
+          <div class='edu_details'>
+            <span class='edu_det_cat'>Ø Grade: </span>
+            <span class='edu_det_grade'>1.9</span>
+            <br>
+            <span class='edu_det_cat'>Title of Thesis: </span>
+            <i class='edu_thesis_title'>TODO</i>
+          </div>
         </div>
       </div>
-      
       <div class='cv_elem_flex'>
         <div class='date_loc'>
           <span class='edu_date'>2013-04 - 2016-08</span>
           <br>
           <span class='edu_loc'>Muenster, Germany</span>
         </div>
-        <div class='edu_details'>
+        <div class='edu_right'>
           <p class='elem_summary'>
             <span class='degree_deg'>B.Sc.</span>
             <span class='degree_name'>Business Adiministration</span>
             <span class='comp'> @ University of Muenster</span>
           </p>
-          <span class='edu_det_cat'>Ø Grade: </span>
-          <span class='edu_det_grade'>1.6</span>
-          <br>
-          <span class='edu_det_cat'>Title of Thesis: </span>
-          <i class='edu_thesis_title'>Default Correlation</i>
+          <div class='edu_details'>
+            <span class='edu_det_cat'>Ø Grade: </span>
+            <span class='edu_det_grade'>1.6</span>
+            <br>
+            <span class='edu_det_cat'>Title of Thesis: </span>
+            <i class='edu_thesis_title'>Default Correlation</i>
+          </div>
         </div>
       </div>
+      
     </div>
-    
+
     <h1 class="sec_header">Knowledge and Skills</h1>
     <hr class="hr1"/>
     <div class='skillim_row'>

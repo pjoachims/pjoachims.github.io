@@ -1,86 +1,99 @@
 :root {
     --background: #F2F2F2;
 }
+ul {
+    margin-left: 20px;
+}
 
 .cv_elem_flex {
     display: flex;
     flex-direction: row;
-    padding-bottom: 35px;
+    margin-bottom: 25px;
 }
 .date_loc {
-    width: 20%;
-    min-width: 130px;
-    max-width: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    margin-left: 10px;
+}
+@media (max-width: 600px) {
+    .date_loc {
+        min-width: 140px;
+        max-width: 140px;
+        margin-right: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .date_loc {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+@media (min-width: 1000px){
+    .date_loc {
+        width: 20%;
+    }
 }
 .elem_summary {
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 7px;
-}
-.work_details {
-}
-ul {
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-.edu_details {
-}
-.edu_details a{
-    color: blue;
-    text-decoration: none;
-}
-.pos{
-    text-transform: uppercase;
-    font-weight: 700;
-}
-.degree_name{
-    text-transform: uppercase;
-    font-weight: 700;
-}
-.degree_deg{
-    font-weight: 700;
-}
+    margin-bottom: 10px;
 
+}
 .sec_header {
-    /* padding: 10px; */
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 0px;
     font-size: 24px;
+    margin-left: 10px;
 }
 .hr1 {
-    margin-top: -0.5em;
-    border: 0;
-    border-top: 1px solid black;
+    margin-top: -1px; 
+    /* border: 0;
+    border-top: 1px solid black; */
 }
 
-.skill_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+/*  Work */
+    .work_right {
+    }
+    .work_details {
+        margin-left: 10px;
+    }
+    
+/*  Education */
+    .edu_right {
+        
+    }
+    .edu_details {
+        margin-left: 10px;
+    }
+    .edu_details a{
+        color: blue;
+        text-decoration: none;
+    }
+    .pos{
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .degree_name{
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .degree_deg{
+        font-weight: 700;
+    }
 
-.skillim_row {
-    /* float: left; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.skillim_cell {
-    padding: 0px;
-    margin: 0px;
-}
-
-.skillim {
-    max-width: 400px;
-    height: auto;
-}
+/* Skill images */
+    .skill_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .skillim_row {
+        /* float: left; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .skillim_cell {
+        padding: 0px;
+        margin: 0px;
+    }
+    .skillim {
+        max-width: 400px;
+        height: auto;
+    }
