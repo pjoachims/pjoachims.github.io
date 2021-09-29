@@ -18,7 +18,6 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 
 html, body {
@@ -27,6 +26,7 @@ html, body {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F2F2F2;
+	color: black;
 }
 .body_container {
     min-width: 300px;
@@ -36,4 +36,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; */
+}
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+}
+.a {
+    text-decoration: none;
+    color: blue;
 }
