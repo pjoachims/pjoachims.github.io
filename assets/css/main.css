@@ -58,7 +58,7 @@ body {
 }
 
 ol, ul {
-	/* list-style: circle inside; */
+	list-style: none;
 }
 
 blockquote, q {
