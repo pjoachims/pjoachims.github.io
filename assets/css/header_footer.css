@@ -50,6 +50,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .footer_copyright {
     font-size: 14px;

@@ -50,8 +50,15 @@ body {
     margin: auto;
 }
 
+@media only screen and (max-width: 1000px) {
+    .body_container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 ol, ul {
-	list-style: none;
+	/* list-style: circle inside; */
 }
 
 blockquote, q {
@@ -88,3 +95,20 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+h1 {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+i {
+    font-style: italic;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+	a:visited{
+	  color:blue;
+	}

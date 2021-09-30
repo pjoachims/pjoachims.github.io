@@ -2,7 +2,8 @@
     --background: #F2F2F2;
 }
 ul {
-    margin-left: 20px !important;
+    margin-left: 10px !important;
+    list-style: circle inside;
 }
 
 .cv_elem_flex {
@@ -11,7 +12,6 @@ ul {
     margin-bottom: 25px;
 }
 .date_loc {
-    margin-left: 10px;
     width: 20%;
 }
 @media (max-width: 600px) {
@@ -28,17 +28,15 @@ ul {
     }
 }
 .elem_summary {
-    margin-top: 0px;
     margin-bottom: 10px;
 
 }
 .sec_header {
-    font-size: 24px;
-    margin-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 .hr1 {
     margin-bottom: 10px;
+    margin-top: 3px;
     border: 0;
     border-top: 1px solid black;
 }
