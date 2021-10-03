@@ -27,12 +27,18 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
+
+ol, ul {
+  	list-style: none;
+}
 
 html, body {
     height: 100%;
@@ -48,6 +54,7 @@ body {
     min-width: 400px;
     max-width: 1000px;
     margin: auto;
+    line-height: 1.1;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -55,10 +62,6 @@ body {
         margin-left: 10px;
         margin-right: 10px;
     }
-}
-
-ol, ul {
-	list-style: none;
 }
 
 blockquote, q {
@@ -106,9 +109,9 @@ i {
 }
 
 a {
-	color: #7a3611;
+	color: #1c5a54;
 	text-decoration: none;
 }
 	a:visited{
-	  color:#7a3611;
+	  color:#1c5a54;
 	}
