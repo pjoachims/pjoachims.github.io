@@ -11,8 +11,9 @@ work:
         end: 2020-12
       position: Student research assistant
       bullets:
-      - TODO
-      - TODO
+      - Convex constrained optimization
+      - Parametric minimum cost flow computation in Python
+      - "Use-cases: traffic, telecommunication, and gas networks"
   intern_pwc:
       company:
         name: PricewaterhouseCoopers AG
