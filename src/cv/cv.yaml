@@ -11,8 +11,7 @@ work:
         end: 2020-12
       position: Student research assistant
       bullets:
-      - Convex constrained optimization
-      - Parametric minimum cost flow computation in Python
+      - "Convex constrained optimization: parametric minimum cost flow computation in Python"
       - "Use-cases: traffic, telecommunication, and gas networks"
   intern_pwc:
       company:
@@ -119,7 +118,7 @@ education:
         end: now
       grade: 1.9  # TODO
       thesis: 
-        name: TODO
+        name: Parametric Computation of Minimum Cost Flow in Python
         grade: TODO
         links: None
       bullets:
