@@ -1,5 +1,5 @@
 :root {
-    --background: #F2F2F2;
+    --background: #F7F2F2;
 }
 
 .body_container .hr1 {
@@ -10,9 +10,22 @@
 
 .body_container h1 {
     font-size: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 .body_container p {
     margin-bottom: 0.5em;
 }
 
+.body_container .quote {
+    margin-bottom: 0.5em;
+}
+
+.quotes {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 20px !important;
+}
+
+.class {
+}

@@ -1,9 +1,11 @@
 :root {
     --background: #F2F2F2;
 }
+
 ul {
+    list-style-type: circle !important;
+    list-style-position: outside !important;
     margin-left: 10px !important;
-    list-style: circle inside;
 }
 
 .cv_elem_flex {
@@ -29,7 +31,6 @@ ul {
 }
 .elem_summary {
     margin-bottom: 10px;
-
 }
 .sec_header {
     margin-bottom: 0px;
@@ -48,6 +49,7 @@ ul {
     .work_details {
         margin-left: 10px;
     }
+    
     
 /*  Education */
     .edu_right {

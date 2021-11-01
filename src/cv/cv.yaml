@@ -118,7 +118,7 @@ education:
         end: now
       grade: 1.9  # TODO
       thesis: 
-        name: Parametric Computation of Minimum Cost Flow in Python
+        name: Parametric Computation of Minimum Cost Flows in Python
         grade: TODO
         links: None
       bullets:
