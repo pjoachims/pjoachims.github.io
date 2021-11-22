@@ -95,14 +95,14 @@ education:
         name: Statistics
       date:
         start: 2018-10
-        end: now
-      grade: 1.6
+        end: 2020-07
+      grade: 1.65
       thesis: 
         name: Uncertainty Quantification with Bayesian Neural Networks
         grade: 1.3
         links:
           GitHub: https://github.com/nnuncert/nnuncert
-          PDF: ../src/master_joachims_per.pdf
+          PDF: src/master_joachims_per.pdf
       bullets:
       - TODO
       - TODO
