@@ -40,11 +40,10 @@ ol, ul {
   	list-style: none;
 }
 
-html, body {
-    height: 100%;
-}
-body {
-    font-family: 'Roboto', sans-serif;
+// fix jumping scrollbar issue: https://aykevl.nl/2014/09/fix-jumping-scrollbar
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
     background-color: #F2F2F2;
 	color: black;
     line-height: 1;
