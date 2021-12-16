@@ -41,7 +41,7 @@ ol, ul {
 }
 
 // fix jumping scrollbar issue: https://aykevl.nl/2014/09/fix-jumping-scrollbar
-html {
+html, body {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
     overflow-y: scroll;
@@ -50,7 +50,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F2F2F2;
-	color: black;
+    color: black;
     line-height: 1;
 }
 
