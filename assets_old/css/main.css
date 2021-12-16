@@ -40,9 +40,11 @@ ol, ul {
   	list-style: none;
 }
 
-html, body {
-    height: 100%;
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F2F2F2;
@@ -54,6 +56,7 @@ body {
     min-width: 400px;
     max-width: 1000px;
     margin: auto;
+	margin-bottom: 10px;
     line-height: 1.1;
 }
 
