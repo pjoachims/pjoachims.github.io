@@ -5,25 +5,51 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+
 // Overwrites ----------------------------------------------------------------------
 $font-stack: Roboto, sans-serif;
 $primary-color: black;
 $font-color: black;
 $font-color2: grey;
-$background-color: #F2F2F2;
+$base-font-weight: 100;
 
 body {
-  font: 100% $font-stack;
-  background-color: $background-color;
-  color: $primary-color;
   min-width: 400px;
+}
+
+body, .site-nav {
+  background-color: $background-color;
+}
+
+// fix jumping scrollbar issue: https://aykevl.nl/2014/09/fix-jumping-scrollbar
+html, body {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+    overflow-y: scroll;
+
+    @media (max-width: 600px) {
+        margin-left: calc(50vw - 50%);
+    }
+}
+
+i, em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 900;
 }
 
 // Overwrites: header --------------------------------------------------------------
 .site-header {
+    border-top: 0px solid #e8e8e8;
+
     .page-link {
         color:$font-color2;
-        margin-left: 2em;
+        margin-left: 1em;
+        font-size: 1.25em;
+        vertical-align: middle;
     }
     .header-thumb-link {
         color:$font-color;
@@ -34,18 +60,12 @@ body {
 }
 .site-title {
     color: $font-color2;
-    font-weight: normal;    
+    font-weight: 300;    
     letter-spacing: 1px;
 
     .header-thumb-link {
         padding-left: 1em;
     }
-}
-
-// fix jumping scrollbar issue: https://aykevl.nl/2014/09/fix-jumping-scrollbar
-html {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
 }
 
 .thumbnail:hover {
@@ -56,95 +76,27 @@ html {
     z-index:999;
 }
 
-work_experience.ul {
-    list-style-type: circle !important;
-    list-style-position: outside !important;
-    margin-left: 10px !important;
+
+input, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
 }
 
-.cv_elem_flex {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
-}
-.date_loc {
-    width: 20%;
-}
-@media (max-width: 600px) {
-    .date_loc {
-        min-width: 140px;
-        max-width: 140px;
-        margin-right: 10px;
-    }
-}
-@media only screen and (min-width: 600px) and (max-width: 1000px) {
-    .date_loc {
-        min-width: 200px;
-        max-width: 200px;
-    }
-}
-.elem_summary {
-    margin-bottom: 10px;
-}
-.sec_header {
-    margin-bottom: 0px;
-}
-.hr1 {
-    margin-bottom: 10px;
-    margin-top: 3px;
-    border: 0;
-    border-top: 1px solid black;
+h1 {
+	font-size: 1.5em;
+	margin-bottom: 5px;
 }
 
-/*  Work */
-    .work_right {
+i {
+    font-style: italic;
+}
 
-    }
-    .work_details {
-        margin-left: 10px;
-    }
-    
-    
-/*  Education */
-    .edu_right {
-        
-    }
-    .edu_details {
-        margin-left: 10px;
-    }
-    .pos{
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .degree_name{
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .degree_deg{
-        font-weight: 700;
-    }
-
-/* Skill images */
-    .skill_container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .skillim_row {
-        /* float: left; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .skillim_cell {
-        padding: 0px;
-        margin: 0px;
-    }
-    .skillim {
-        max-width: 400px;
-        height: auto;
-    }
-
-
-
+a {
+	color: #1c5a54;
+	text-decoration: none;
+}
+	a:visited{
+	  color:#1c5a54;
+	}

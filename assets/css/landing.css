@@ -1,0 +1,48 @@
+.slogan {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.proj {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    margin-bottom: 1em;
+    flex: 1;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.proj_left.strong {
+    font-weight: 200;
+}
+
+.proj_left {
+    width: 20%;
+}
+@media (max-width: 600px) {
+    .proj_left {
+        min-width: 140px;
+        max-width: 140px;
+        margin-right: 10px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .proj_left {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .proj_left {
+        min-width: 20%;
+        max-width: 20%;
+    }
+}
+
+.proj_right {
+    margin-left: 1.5em;
+}

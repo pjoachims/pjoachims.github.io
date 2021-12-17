@@ -2,6 +2,7 @@
 layout: default
 title: CV
 permalink: /cv/
+custom_css: cv
 ---
 
 <div id="work_experience">
@@ -73,7 +74,7 @@ permalink: /cv/
         <div class='work_details'>
         <ul>
             <li>
-            Business valuations with the DCF and multiple method
+            Business valuations with the DCF and multiple analysis
             </li>
             <li>
             Analyses of businessplans of potential investements
@@ -104,13 +105,18 @@ permalink: /cv/
         <span class='comp'> @ Humboldt-Universitaet zu Berlin</span>
         </p>
         <div class='edu_details'>
-        <span class='edu_det_cat'>Ø Grade: </span>
-        <span class='edu_det_grade'>1.6</span>
-        <br>
-        <span class='edu_det_cat'>Title of Thesis: </span>
-        <i class='edu_thesis_title'>Uncertainty Quantification with Bayesian Neural Networks</i>
-        <a href="https://github.com/nnuncert/nnuncert">[GitHub]</a>
-        <a href="/src/master_joachims_per.pdf">[PDF]</a>
+        <ul>
+            <li>
+                <span class='edu_det_cat'>Ø Grade: </span>
+                <span class='edu_det_grade'>1.6</span>
+            </li>
+            <li>
+                <span class='edu_det_cat'>Title of Thesis: </span>
+                <i class='edu_thesis_title'>Uncertainty Quantification with Bayesian Neural Networks</i>
+                <a href="https://github.com/nnuncert/nnuncert">[GitHub]</a>
+                <a href="/src/master_joachims_per.pdf">[PDF]</a>
+            </li>
+        </ul>
         </div>
     </div>
     </div>
@@ -127,11 +133,16 @@ permalink: /cv/
         <span class='comp'> @ Technische Universitaet zu Berlin</span>
         </p>
         <div class='edu_details'>
-        <span class='edu_det_cat'>Ø Grade: </span>
-        <span class='edu_det_grade'>1.9</span>
-        <br>
-        <span class='edu_det_cat'>Title of Thesis: </span>
-        <i class='edu_thesis_title'>Parametric Computation of Minimum Cost Flows in Python</i>
+        <ul>
+            <li>
+                <span class='edu_det_cat'>Ø Grade: </span>
+                <span class='edu_det_grade'>1.9</span>
+            </li>
+            <li>
+                <span class='edu_det_cat'>Title of Thesis: </span>
+                <i class='edu_thesis_title'>Parametric Computation of Minimum Cost Flows in Python</i>
+            </li>
+        </ul>
         </div>
     </div>
     </div>
@@ -148,11 +159,18 @@ permalink: /cv/
         <span class='comp'> @ University of Muenster</span>
         </p>
         <div class='edu_details'>
-        <span class='edu_det_cat'>Ø Grade: </span>
-        <span class='edu_det_grade'>1.6</span>
+        <ul>
+            <li>
+                <span class='edu_det_cat'>Ø Grade: </span>
+                <span class='edu_det_grade'>1.6</span>
+            </li>
+            <li>
+                <span class='edu_det_cat'>Title of Thesis: </span>
+                <i class='edu_thesis_title'>Default Correlation</i>
+            </li>
+        </ul>
+
         <br>
-        <span class='edu_det_cat'>Title of Thesis: </span>
-        <i class='edu_thesis_title'>Default Correlation</i>
         </div>
     </div>
     </div>

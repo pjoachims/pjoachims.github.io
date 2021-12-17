@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer_copyright {
+    font-size: 14px;
+}
+.footer_icons {
+    font-size: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_icons i {
+    color: grey;
+    margin-left: 0.2em;
+}
+
+.footer_icons i:hover {
+    color: #21413E;
+}   

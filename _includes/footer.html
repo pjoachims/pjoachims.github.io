@@ -1,37 +1,26 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<!DOCTYPE html>
+<html lang="en">
 
-  <div class="wrapper">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+</head>
+<body>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
+
+    <div class="footer">
+      <div class="footer_copyright">
+        &copy; <span id="year">2018</span> by Per Joachims
       </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
+      <div class="footer_icons">
+        <a href="https://github.com/pjoachims/"><i class="fab fa-github fa-fw" aria-hidden="true" ></i></a>
+        <a href="https://www.linkedin.com/in/per-joachims-1476b8a2/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a>
+        <a href="mailto:p.joachims@gmail.com"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i></a>
       </div>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
     </div>
 
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
-
-  </div>
-
-</footer>
+</body>
+</html>

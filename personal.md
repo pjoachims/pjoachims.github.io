@@ -1,18 +1,21 @@
 ---
-layout: page
+layout: default
 title: Personal
 permalink: /personal/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hej, I am Per and I am currently finishing my studies in statistics (M.Sc.) and computer engineering (B.Sc.) in Berlin.
+I believe that (modern) life requires constant learning. Thus, I like to challenge myself both professionally and personally.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+# Personal interests
+When it comes to sports, I happily join any endeavor, no matter if it's cycling through the woods for days or playing football at the beach.
+There are days where I indulge in one Sci-Fi book after another while walking through the streets of Berlin.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+# Currently reading / exploring / watching
+- I am very excited about the movie [Dune](https://en.wikipedia.org/wiki/Dune_(2021_film))
+and the tv adaption of [Foundation](https://en.wikipedia.org/wiki/Foundation_series)
 
-
-[jekyll-organization]: https://github.com/jekyll
+# My favorite quotes
+- *Look for the bare necessities, the simple bare necessities. Forget about your worries and your strife* – The Jungle Book.
+- *Perhaps it would be better only to consider whether it is right to do this; and, if it is, to do it.* – David Copperfield by Charles Dickens.
+- *Life is not a problem to be solved, but a reality to be experienced.* – Soren Kierkegaard.

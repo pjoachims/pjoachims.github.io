@@ -1,17 +1,17 @@
-:root {
-    --background: #F2F2F2;
-}
-
 ul {
     list-style-type: circle !important;
     list-style-position: outside !important;
     margin-left: 10px !important;
+    margin-bottom: 0px;
 }
+
 
 .cv_elem_flex {
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
+    margin-bottom: 2em;
+    line-height: 1;
 }
 .date_loc {
     width: 20%;
@@ -42,52 +42,41 @@ ul {
     border-top: 1px solid black;
 }
 
-/*  Work */
-    .work_right {
+.work_details {
+    margin-left: 10px;
+}
 
-    }
-    .work_details {
-        margin-left: 10px;
-    }
-    
-    
-/*  Education */
-    .edu_right {
-        
-    }
-    .edu_details {
-        margin-left: 10px;
-    }
-    .pos{
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .degree_name{
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .degree_deg{
-        font-weight: 700;
-    }
+.edu_details {
+    margin-left: 10px;
+}
+.pos{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.degree_name{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.degree_deg{
+    font-weight: 400;
+}
 
-/* Skill images */
-    .skill_container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .skillim_row {
-        /* float: left; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .skillim_cell {
-        padding: 0px;
-        margin: 0px;
-    }
-    .skillim {
-        max-width: 400px;
-        height: auto;
-    }
+.skill_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.skillim_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skillim_cell {
+    padding: 0px;
+    margin: 0px;
+}
+.skillim {
+    max-width: 400px;
+    height: auto;
+}
