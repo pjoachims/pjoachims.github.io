@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="book-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+  
+  {% if site.paginate %}
+    {% assign books = paginator.books %}
+  {% else %}
+    {% assign books = site.books %}
+  {% endif %}
+
+  {%- if books.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="book-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="book-list">
+      {%- for book in books -%}
+        {%- if book.publish -%}
+          <li>
+            <h3>
+              <a class="book-link" href="{{ book.url | relative_url }}">
+                {% if book.name %}
+                  {{ book.name | escape }}
+                {% else %}
+                  {{ book.title | escape }}
+                {% endif %}
+              </a>
+            </h3>
+            {% if book.type and book.author %}
+              <span class="post-meta">{{ book.type }} by {{ book.author }}</span>
+            {% elsif book.type %}
+              <span class="post-meta">{{ book.type }}</span>
+            {% elsif book.author %}
+              <span class="post-meta">{{ book.author }}</span>
+            {% endif %}
+            {%- if site.show_excerpts -%}
+              {{ book.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endif -%}
+      {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+
+  {%- endif -%}
+
+</div>

@@ -1,0 +1,72 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# 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
+
+title: Per Joachims
+email: p.joachims@gmail.com
+description: "" # this means to ignore newlines until "baseurl:"      
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://pjoachims.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  pjoachims
+linkedin_username: per-joachims-1476b8a2
+logo: "/src/pics/me.jpg"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+header_pages:
+  - books.md
+  # - blog.md
+  # - cv.md
+  - personal.md
+
+collections:
+  books:
+    output: true
+
+
+# -- Staticman
+staticman_url: https://pjstaticman.herokuapp.com/v2/entry/pjoachims/pjoachims.github.io/main/comments
+reCaptcha:
+  siteKey: 6LeLWK8dAAAAAHldFuELFA3s2oHwU1c8ybNp7U0W
+  secret: zVEh0dP9Ymq/EHcTfB75+Vpsy8R4b3kpeCtktdpYs5TaLWkYl91D3pbDase8/8MSWCKFpf1U8S/3ddQ3QaibsiYIs9s4H0869NfiGXYjxDpvXB3FWIWEJ63R0cw3Uyum4j4g/EmRcW85KJX+qLJ80YVzo98OzeRLIpF91eBOChhPdsOfsVp9V7noFqjEfycLc8bu0ZvMvr7tzCt2jMCpucPpqOw+j6lAZ0Jd6gCixJ4asIHGf3a3qHC6wvRqlaXPG0FbtHEnnmngdfJ940DmthyQ9+cjkbXU55n1WVmLQWrP5E2LWtkZjVgywRV3cKNvdPVBw2GonL8e967IzwWXyD0cIypDolmvq+lI++554u0wKLjtIfmMWGUKEzrjY6kACGHb92bnuCJrbxWcA5RlWUJPukWFCos7h9BMDyLBEiq/R/OP0yi37q230qttySmyuG/RUYfR2WpgKS8OnEgxbeOABU4ulst8uAuuTreNQy0geOT1GxQc+f0/ZJZuORdVK1O44onUzRNiyD+2XIKxXh8dQzJ1BupDm/r1jS/oKB1yk/N2nJrzVgTafKpwidErsrejTNsKOvaGy4NDmXB2EdUmUZBnlMN5mbmTEgJmI2+A9oXUYCfNz++ibZayIWQN9lXe7bGeoR5/Yy56BpYQbwHGt56eLulBwTXH5v7iqiQ=
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

@@ -1,0 +1,181 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+$font-color: black;
+$font-color2: grey;
+
+body {
+  min-width: 350px;
+}
+
+body, .site-nav {
+  background-color: $background-color;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+i, em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 900;
+}
+
+// Overwrites: header --------------------------------------------------------------
+.site-header {
+    border-top: 0px solid #e8e8e8;
+    border-bottom: 0px;
+
+    .book-link {
+        color:$font-color2;
+        margin-left: 1em;
+        font-size: 1.25em;
+        vertical-align: middle;
+    }
+    .header-thumb-link {
+        color:$font-color;
+    }
+    .header-thumb-link:visited {
+        color:$font-color;
+    }
+}
+.site-title {
+    color: $font-color2;
+    font-weight: 300;    
+    letter-spacing: 1px;
+
+    .header-thumb-link {
+        padding-left: 1em;
+    }
+}
+
+.thumbnail:hover {
+    position:relative;
+    width:350px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+
+input, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+i {
+    font-style: italic;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+a {
+	color: #1c5a54;
+	text-decoration: none;
+}
+	a:visited{
+	  color:#1c5a54;
+	}
+
+
+.md_content h1 {
+    @include relative-font-size(2.625);
+    letter-spacing: -1px;
+    line-height: 1.15;
+  
+    @media screen and (min-width: $on-large) {
+        @include relative-font-size(2.625);
+    }
+}
+
+.md_content {
+    margin-bottom: $spacing-unit;
+  
+    h1, h2, h3 { margin-top: $spacing-unit }
+    h4, h5, h6 { margin-top: $spacing-unit }
+  
+    h2 {
+        @include relative-font-size(1.75);
+  
+        @media screen and (min-width: $on-large) {
+            @include relative-font-size(2);
+        }
+    }
+  
+    h3 {
+        @include relative-font-size(1.375);
+  
+         @media screen and (min-width: $on-large) {
+            @include relative-font-size(1.625);
+      }
+    }
+  
+    h4 {
+        @include relative-font-size(1.25);
+    }
+  
+    h5 {
+        @include relative-font-size(1.125);
+    }
+    h6 {
+        @include relative-font-size(1.0625);
+    }
+}
+
+/**
+ * Book home content
+ */
+.book-content {
+    padding: $spacing-unit 0;
+    flex: 1 0 auto;
+}
+
+.book-heading {
+    @include relative-font-size(2);
+}
+
+.book-list-heading {
+    @include relative-font-size(1.75);
+}
+
+.book-list {
+    margin-left: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: $spacing-unit;
+    }
+
+    h3 {
+        margin-bottom: 0px;
+    }
+}
+
+.book-meta {
+    font-size: $small-font-size;
+    color: $brand-color;
+}
+
+.book-link {
+    display: block;
+    @include relative-font-size(1.5);
+}
