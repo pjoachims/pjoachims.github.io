@@ -37,6 +37,16 @@ nav a:hover{border-bottom:2px solid var(--ink);background:var(--accent);color:#f
 .hero h1{font-size:clamp(32px,6vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.05}
 .hero h1 em{font-style:normal;background:var(--accent);color:#fff;padding:0 8px}
 .hero p{margin-top:18px;max-width:58ch}
+.hero .ai{
+  margin-top:22px;max-width:58ch;font-size:14px;
+  border:1.5px solid var(--ink);background:#fff;padding:12px 16px;
+  box-shadow:4px 4px 0 var(--ink);
+}
+.hero .ai u{text-decoration-thickness:2px}
+.hero .ai .k{
+  display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1.5px;color:var(--accent);margin-bottom:4px;
+}
 .hero .meta{margin-top:24px;font-size:13px;display:flex;gap:24px;flex-wrap:wrap}
 .hero .meta span::before{content:"→ ";color:var(--accent);font-weight:700}
 
@@ -127,7 +137,10 @@ h2.sec::after{content:" ////";color:var(--accent)}
 .sidebox details[open] summary::after{content:"prev ▴";color:var(--accent)}
 .sidebox .prev{list-style:none;margin-top:8px;border-left:2px solid var(--accent);padding-left:10px}
 .sidebox .prev li{font-size:12px;color:#777;padding:2px 0}
+.sidebox .prev li{padding:4px 0}
+.sidebox .prev .note{margin:1px 0 2px;font-size:11.5px}
 .sidebox .note{display:block;font-size:12px;color:#666;font-style:italic;margin-top:4px}
+.sidebox .also{display:block;margin-top:10px}
 
 /* hobbies blocks */
 .offkb{margin-top:44px}
@@ -201,10 +214,15 @@ dialog .close:hover{background:var(--ink)}
     <h1>I build what I <em>want to see</em> in the world.</h1>
     <p>Statistician &amp; computer engineer in Berlin. Everything here started as a tool
     for myself — maps for my own hikes, pivot tables for my own analyses, an expense
-    splitter for trips with my own friends. I build them for me, and ship them hoping
-    they're useful to you too.</p>
+    splitter for trips with my own friends. I build them for me, and hope they are
+    useful for others, too.</p>
     <p>By day I'm an analytics engineer at flaschenpost — clickstream pipelines, dbt
     models, internal dashboards. In everything: I update my beliefs when I see new data.</p>
+    <p class="ai">
+      <span class="k">building with ai</span>
+      Working with AI fits my nature: I can just build things. Blockers rarely stay
+      blockers, iteration is fast, <u>taste is what decides</u>.
+    </p>
     <div class="meta">
       <span>currently: abseits &amp; monkeysplit</span>
       <span>berlin, de</span>
@@ -279,18 +297,28 @@ dialog .close:hover{background:var(--ink)}
               </summary>
               <ul class="prev">
                 <li>The Count of Monte Cristo — Dumas</li>
-                <li>Fall of Giants — Ken Follett</li>
+                <li>
+                  Fall of Giants — Ken Follett
+                  <span class="note">learned more about the road to WW1 than in
+                  years of history class</span>
+                </li>
               </ul>
             </details>
           </li>
           <li>
             <details>
               <summary>
-                <span class="k">watching</span>A Knight of the Seven Kingdoms
+                <span class="k">watching</span>Project Hail Mary
+                <span class="note">left the cinema with a big smile — been a while</span>
+                <span class="also">A Knight of the Seven Kingdoms</span>
                 <span class="note">feels like 2013 again — when GoT was crazy-good TV</span>
               </summary>
               <ul class="prev">
-                <li>Sluga Naroda</li>
+                <li>
+                  Sluga Naroda
+                  <span class="note">a teacher accidentally becomes president — played
+                  by Zelenskyy, who then actually did. surreal.</span>
+                </li>
               </ul>
             </details>
           </li>
