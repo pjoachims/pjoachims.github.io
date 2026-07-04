@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per Joachims</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>▚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0a;
+  --paper:#f4f4f0;
+  --accent:#00c2a8; /* visitors can play with the dots bottom-right */
+  --border:2px solid var(--ink);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"JetBrains Mono",monospace;
+  background:var(--paper);color:var(--ink);
+  font-size:15px;line-height:1.55;
+}
+a{color:inherit}
+::selection{background:var(--accent);color:#fff}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+header{border-bottom:var(--border)}
+header .wrap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;letter-spacing:-.5px}
+.logo::before{content:"▚ ";color:var(--accent)}
+nav a{margin-left:20px;text-decoration:none;border-bottom:2px solid transparent}
+nav a:hover{border-bottom:2px solid var(--ink);background:var(--accent);color:#fff}
+
+/* hero */
+.hero{padding:64px 0 48px;border-bottom:var(--border)}
+.hero h1{font-size:clamp(32px,6vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.05}
+.hero h1 em{font-style:normal;background:var(--accent);color:#fff;padding:0 8px}
+.hero p{margin-top:18px;max-width:58ch}
+.hero .meta{margin-top:24px;font-size:13px;display:flex;gap:24px;flex-wrap:wrap}
+.hero .meta span::before{content:"→ ";color:var(--accent);font-weight:700}
+
+/* main layout */
+main .wrap{display:grid;grid-template-columns:1fr 320px;gap:0}
+@media(max-width:820px){main .wrap{grid-template-columns:1fr}}
+.projects{padding:40px 40px 64px 0;border-right:var(--border)}
+@media(max-width:820px){.projects{border-right:none;padding-right:0}}
+h2.sec{font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:24px}
+h2.sec::after{content:" ////";color:var(--accent)}
+
+.card{
+  border:var(--border);background:#fff;padding:22px;margin-bottom:24px;position:relative;
+  box-shadow:6px 6px 0 var(--accent),6px 6px 0 2px var(--ink);
+  transition:transform .12s ease, box-shadow .12s ease;cursor:pointer;
+}
+.card:hover{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--accent),10px 10px 0 2px var(--ink)}
+.card:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--accent)}
+.card .tag{
+  position:absolute;top:-11px;left:14px;background:var(--ink);color:var(--paper);
+  font-size:11px;padding:2px 8px;text-transform:uppercase;letter-spacing:1px;
+}
+.card .tag.live{background:var(--accent);color:#fff;border:2px solid var(--ink)}
+.card h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.card h3 .emoji{margin-right:6px}
+.card h3 .icon, dialog h3 .icon{
+  width:28px;height:28px;
+  vertical-align:-7px;margin-right:8px;
+}
+.card p{font-size:14px;color:#333}
+.card .stack{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.card .stack li{list-style:none;font-size:11px;border:1.5px solid var(--ink);padding:1px 7px;background:var(--paper)}
+.card .cardlinks{
+  margin-top:16px;display:flex;gap:20px;align-items:baseline;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+}
+.card .cardlinks a{text-decoration:none;border-bottom:2px solid var(--accent)}
+.card .cardlinks a:hover{background:var(--accent);color:#fff}
+.card .cardlinks a::after{content:" ↗";color:var(--accent)}
+.card .cardlinks a:hover::after{color:#fff}
+.card .open{color:#888}
+.card .open::after{content:" +"}
+.card:hover .open{color:var(--ink)}
+
+.past{margin-top:48px}
+.past ul{list-style:none}
+.past li{border-top:1.5px dashed var(--ink);padding:10px 0;font-size:14px;display:flex;gap:12px;flex-wrap:wrap}
+.past li:last-child{border-bottom:1.5px dashed var(--ink)}
+.past .year{font-weight:700;min-width:4ch;color:var(--accent)}
+.past a{text-decoration-thickness:2px}
+
+/* sidebar */
+.side{padding:40px 0 64px 32px}
+@media(max-width:820px){.side{padding-left:0;border-top:var(--border)}}
+
+/* "currently" box */
+.sidebox{
+  border:var(--border);background:#fff;margin-bottom:44px;
+  box-shadow:6px 6px 0 var(--accent),6px 6px 0 2px var(--ink);
+}
+.sidebox .head{
+  background:var(--ink);color:var(--paper);padding:8px 14px;
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.sidebox .head .dot{
+  width:9px;height:9px;border-radius:50%;background:var(--accent);
+  animation:blink 1.6s infinite;
+}
+@keyframes blink{50%{opacity:.25}}
+.sidebox > ul{list-style:none}
+.sidebox > ul > li{border-top:1.5px dashed #bbb;font-size:13px}
+.sidebox > ul > li:first-child{border-top:none}
+.sidebox .k{
+  display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1.5px;color:#888;margin-bottom:2px;
+}
+.sidebox i{color:#666;font-size:12px}
+.sidebox .foot{border-top:var(--border);padding:6px 14px;font-size:11px;color:#888}
+/* expandable previous entries */
+.sidebox details{padding:12px 14px}
+.sidebox summary{cursor:pointer;list-style:none;position:relative}
+.sidebox summary::-webkit-details-marker{display:none}
+.sidebox summary::after{
+  content:"prev ▾";position:absolute;right:0;top:0;
+  font-size:10px;color:#aaa;letter-spacing:1px;
+}
+.sidebox details[open] summary::after{content:"prev ▴";color:var(--accent)}
+.sidebox .prev{list-style:none;margin-top:8px;border-left:2px solid var(--accent);padding-left:10px}
+.sidebox .prev li{font-size:12px;color:#777;padding:2px 0}
+.sidebox .note{display:block;font-size:12px;color:#666;font-style:italic;margin-top:4px}
+
+/* hobbies blocks */
+.offkb{margin-top:44px}
+.offkb ul{list-style:none}
+.offkb li{
+  font-size:13px;padding:10px 12px;margin-bottom:12px;
+  border:1.5px solid var(--ink);background:#fff;
+  box-shadow:3px 3px 0 var(--ink);
+  display:flex;gap:10px;align-items:baseline;
+}
+.offkb .ico{flex:none}
+
+.tl{list-style:none;position:relative;padding-left:20px}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:var(--ink)}
+.tl li{position:relative;padding-bottom:26px;font-size:13px}
+.tl li::before{
+  content:"";position:absolute;left:-20px;top:5px;
+  width:10px;height:10px;background:var(--paper);border:2px solid var(--ink);
+}
+.tl li.now::before{background:var(--accent)}
+.tl .when{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.tl .what{display:block;margin-top:2px}
+.tl .where{color:#666;font-size:12px}
+
+footer{border-top:var(--border);font-size:13px;margin-bottom:64px} /* keeps links clear of the accent picker */
+footer .wrap{display:flex;justify-content:space-between;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;gap:8px}
+
+dialog{
+  border:var(--border);background:#fff;color:var(--ink);
+  max-width:620px;width:calc(100% - 40px);padding:28px;margin:auto;
+  box-shadow:10px 10px 0 var(--accent),10px 10px 0 2px var(--ink);font-family:inherit;
+}
+dialog::backdrop{background:rgba(10,10,10,.55)}
+dialog h3{font-size:22px;font-weight:800;margin-bottom:12px}
+dialog p{font-size:14px;margin-bottom:12px}
+dialog ul{font-size:13.5px;margin:0 0 12px 18px}
+dialog li{margin-bottom:4px}
+dialog .links{margin-top:18px;display:flex;gap:14px;font-size:13px;font-weight:700}
+dialog .close{
+  position:absolute;top:10px;right:10px;border:2px solid var(--ink);
+  background:var(--accent);color:#fff;font-family:inherit;font-weight:800;
+  width:32px;height:32px;cursor:pointer;font-size:16px;
+}
+dialog .close:hover{background:var(--ink)}
+
+/* accent picker — a little toy for visitors */
+#picker{
+  position:fixed;bottom:14px;right:14px;z-index:9;
+  display:flex;gap:8px;border:var(--border);background:#fff;padding:8px 10px;
+  box-shadow:4px 4px 0 var(--ink);
+}
+#picker button{width:22px;height:22px;border:2px solid var(--ink);cursor:pointer}
+#picker button:hover{transform:scale(1.15)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="logo">per joachims</span>
+    <nav>
+      <a href="#projects">projects</a>
+      <a href="#timeline">timeline</a>
+      <a href="https://github.com/pjoachims">github</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>I build what I <em>want to see</em> in the world.</h1>
+    <p>Statistician &amp; computer engineer in Berlin. Everything here started as a tool
+    for myself — maps for my own hikes, pivot tables for my own analyses, an expense
+    splitter for trips with my own friends. I build them for me, and ship them hoping
+    they're useful to you too.</p>
+    <p>By day I'm an analytics engineer at flaschenpost — clickstream pipelines, dbt
+    models, internal dashboards. In everything: I update my beliefs when I see new data.</p>
+    <div class="meta">
+      <span>currently: abseits &amp; monkeysplit</span>
+      <span>berlin, de</span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section class="projects" id="projects">
+      <h2 class="sec">Now building</h2>
+
+      <article class="card" onclick="document.getElementById('m-abseits').showModal()">
+        <span class="tag live">active</span>
+        <h3><img class="icon" src="/assets/img/abseits-favicon.svg" alt="">abseits</h3>
+        <p>Offline-first outdoor maps and route planning for hiking and biking — from an
+        afternoon loop to a multi-day trek. Download a map region, plan routes with
+        elevation-aware A* pathfinding — entirely on your device, no signal needed.
+        PWA + native iOS &amp; Android.</p>
+        <ul class="stack"><li>client-side A* routing</li><li>own tile pipeline (OSM/SRTM)</li><li>3D terrain</li></ul>
+        <div class="cardlinks">
+          <a href="https://abseits.app" onclick="event.stopPropagation()">abseits.app</a>
+          <span class="open">details</span>
+        </div>
+      </article>
+
+      <article class="card" onclick="document.getElementById('m-monkey').showModal()">
+        <span class="tag live">active</span>
+        <h3><img class="icon" src="/assets/img/monkeysplit-favicon.png" alt="">MonkeySplit</h3>
+        <p>Every expense splitter I tried turns adding a few expenses into minutes of
+        form-wrestling. So I built one that gets out of the way: add, split, settle —
+        with the minimum number of transactions. Offline-first PWA + iOS app, with
+        organic users and zero marketing.</p>
+        <div class="cardlinks">
+          <a href="https://monkeysplit.app/demo" onclick="event.stopPropagation()">try the demo</a>
+          <span class="open">details</span>
+        </div>
+      </article>
+
+      <article class="card" onclick="document.getElementById('m-parrot').showModal()">
+        <span class="tag">v1 shipped</span>
+        <h3><span class="emoji">🦜</span>Pivot Parrot</h3>
+        <p>Excel-style pivot tables for Jupyter, Streamlit and React — powered by DuckDB
+        WASM. Drag-and-drop analysis on 100k+ rows, right in the browser. No server required.</p>
+        <ul class="stack"><li>DuckDB WASM in-browser</li><li>instant re-pivot via CUBE cache</li></ul>
+        <div class="cardlinks">
+          <a href="https://pjoachims.github.io/pivot-parrot/" onclick="event.stopPropagation()">live demo</a>
+          <span class="open">details</span>
+        </div>
+      </article>
+
+      <div class="past">
+        <h2 class="sec">Earlier</h2>
+        <ul>
+          <li><span class="year">2022</span><span><a href="https://github.com/paminco/paminco">paminco</a> — parametric minimum-cost flows in Python (B.Sc. thesis, research assistant @ HU operations research)</span></li>
+          <li><span class="year">2021</span><span><a href="https://github.com/nnuncert/nnuncert">nnuncert</a> — uncertainty quantification with Bayesian neural networks (M.Sc. thesis)</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="side" id="timeline">
+      <div class="sidebox">
+        <div class="head">currently <span class="dot"></span></div>
+        <ul>
+          <li>
+            <details>
+              <summary>
+                <span class="k">reading</span>20,000 Leagues Under the Sea <i>— Jules Verne, 1870</i>
+                <span class="note">an all-electric submarine, a decade before the
+                light bulb — wildly futuristic for its time</span>
+              </summary>
+              <ul class="prev">
+                <li>The Count of Monte Cristo — Dumas</li>
+                <li>Fall of Giants — Ken Follett</li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <span class="k">watching</span>A Knight of the Seven Kingdoms
+                <span class="note">felt like 2013 again — when GoT was crazy-good TV</span>
+              </summary>
+              <ul class="prev">
+                <li>Sluga Naroda</li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+        <div class="foot">last updated: jul 2026 <!-- TODO: keep me fresh --></div>
+      </div>
+
+      <h2 class="sec">Timeline</h2>
+      <ul class="tl">
+        <li class="now">
+          <span class="when">2023 —</span>
+          <span class="what">Senior Analytics Engineer @ flaschenpost</span>
+          <span class="where">customer analytics · streaming ETL, dbt, reporting platform · berlin</span>
+        </li>
+        <li>
+          <span class="when">2022 — 23</span>
+          <span class="what">Analyst, Finance @ flaschenpost</span>
+          <span class="where">owned annual budget &amp; financial planning</span>
+        </li>
+        <li>
+          <span class="when">2019 — 20</span>
+          <span class="what">Research assistant, Operations Research</span>
+          <span class="where">HU Berlin · co-created paminco</span>
+        </li>
+        <li>
+          <span class="when">2018 — 21</span>
+          <span class="what">M.Sc. Statistics</span>
+          <span class="where">HU Berlin · thesis: Bayesian NN uncertainty</span>
+        </li>
+        <li>
+          <span class="when">2017 — 22</span>
+          <span class="what">B.Sc. Computer Engineering</span>
+          <span class="where">TU Berlin · thesis: paminco — min-cost flows</span>
+        </li>
+        <li>
+          <span class="when">2014 — 16</span>
+          <span class="what">Internships</span>
+          <span class="where">PwC · eCAPITAL · Dr. Oetker · Nagel</span>
+        </li>
+        <li>
+          <span class="when">2013 — 16</span>
+          <span class="what">B.Sc. Business Administration</span>
+          <span class="where">Uni Münster · thesis: default correlation</span>
+        </li>
+      </ul>
+
+      <div class="offkb">
+        <h2 class="sec">Off the keyboard</h2>
+        <ul>
+          <li><span class="ico">🥾</span><span>hiking &amp; cycling — the longer the better</span></li>
+          <li><span class="ico">⚽</span><span>football, running, swimming — I join any endeavor</span></li>
+          <li><span class="ico">📚</span><span>(audio)books, one after another, on foot through Berlin</span></li>
+          <li><span class="ico">🍳</span><span>cooking &amp; painting</span></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© per joachims</span>
+    <span><a href="mailto:pjoachims@gmail.com">pjoachims@gmail.com</a> · <a href="https://github.com/pjoachims">github</a> · <a href="https://linkedin.com/in/per-joachims-1476b8a2/">linkedin</a></span>
+  </div>
+</footer>
+
+<dialog id="m-abseits">
+  <button class="close" onclick="this.closest('dialog').close()">×</button>
+  <h3><img class="icon" src="/assets/img/abseits-favicon.svg" alt="">abseits</h3>
+  <p>Offline-first outdoor maps and route planning for hiking and biking.</p>
+  <ul>
+    <li>Downloadable map regions stored on-device — vector tiles, terrain, routing graph (~30MB for an Alps region, cities bigger)</li>
+    <li>Client-side A* routing — elevation-aware, typed arrays, works across regions</li>
+    <li>Map styles: topo, satellite + hillshade, contours, 3D terrain</li>
+    <li>Trail intelligence: SAC grades T1–T6, named routes, ~200 POI types</li>
+    <li>Routing profiles for hiking / biking / gravel; offline fuzzy POI search</li>
+    <li>Custom tile pipeline from OSM/SRTM data</li>
+  </ul>
+  <div class="links">
+    <a href="https://abseits.app">abseits.app ↗</a>
+  </div>
+</dialog>
+
+<dialog id="m-monkey">
+  <button class="close" onclick="this.closest('dialog').close()">×</button>
+  <h3><img class="icon" src="/assets/img/monkeysplit-favicon.png" alt="">MonkeySplit</h3>
+  <p>Full-stack group expense splitting — web + native, with organic users and zero marketing.</p>
+  <ul>
+    <li>Flexible splits: equal, by amount, or percentage — per-payer and per-payee</li>
+    <li>Smart settlements: greedy algorithm for minimum transactions; PayPal one-click settle-up</li>
+    <li>30+ currencies via daily ECB rates; recurring expenses; interactive charts</li>
+    <li>Offline-first PWA: mutations queue offline, flush on reconnect</li>
+    <li>iOS released (Fastlane pipeline), Android in progress</li>
+    <li>Cloudflare end-to-end: Worker (Hono) + D1 + KV + Pages, Better Auth</li>
+  </ul>
+  <div class="links">
+    <a href="https://monkeysplit.app/demo">try the demo ↗</a>
+  </div>
+</dialog>
+
+<dialog id="m-parrot">
+  <button class="close" onclick="this.closest('dialog').close()">×</button>
+  <h3>🦜 Pivot Parrot</h3>
+  <p>Hand it a DataFrame, get an interactive pivot table.</p>
+  <ul>
+    <li>Every aggregation is a real SQL query — DuckDB WASM in-browser, or remote mode via HTTP</li>
+    <li>SQL CUBE queries with caching: rearranging fields is instant</li>
+    <li>Scales to 100k+ rows; virtual scrolling; custom SQL metrics</li>
+    <li>Monorepo: React library + Streamlit wrapper (pip installable) + Jupyter widget</li>
+    <li>Apache Arrow transfer, automatic schema detection, CSV/JSON in, CSV out</li>
+  </ul>
+  <div class="links">
+    <a href="https://pjoachims.github.io/pivot-parrot/">live demo ↗</a>
+    <a href="https://github.com/pjoachims/pivot-parrot">github ↗</a>
+  </div>
+</dialog>
+
+<div id="picker" title="pick your accent"></div>
+
+<script>
+document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => {
+  if (e.target === d) d.close();
+}));
+
+// accent picker — visitor's choice sticks via localStorage
+const colors = ['#00c2a8','#ff5000','#3d3dff','#ff2e88','#ffd400','#a6ff3f'];
+const setAccent = c => document.documentElement.style.setProperty('--accent', c);
+const saved = localStorage.getItem('accent');
+if (colors.includes(saved)) setAccent(saved);
+const picker = document.getElementById('picker');
+colors.forEach(c => {
+  const b = document.createElement('button');
+  b.style.background = c;
+  b.onclick = () => { setAccent(c); localStorage.setItem('accent', c); };
+  picker.appendChild(b);
+});
+</script>
+</body>
+</html>
