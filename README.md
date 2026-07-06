@@ -1,3 +1,3 @@
 # pjoachims.github.io
 
-https://perjoachims.com/
+pjoachims.github.io
